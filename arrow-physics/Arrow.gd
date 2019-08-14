@@ -1,6 +1,6 @@
 extends Area2D
 
-export var mass = 0.25
+export var mass = 2.0
 
 var launched = false
 var velocity = Vector2(0, 0)
@@ -12,7 +12,8 @@ func _ready():
 func _process(delta):
 	
 	if launched:
-		velocity += gravity_vec*gravity*mass
+		# Update: delta is also needed here
+		velocity += gravity_vec*gravity*mass*delta
 		
 		position += velocity*delta
 		

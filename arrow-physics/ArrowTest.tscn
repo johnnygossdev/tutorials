@@ -8,7 +8,7 @@ script = ExtResource( 1 )
 
 [node name="Arrow" parent="." instance=ExtResource( 2 )]
 position = Vector2( 44.0642, 82.1417 )
-mass = 0.3
+gravity = 98.0
 
 [node name="UI" type="VBoxContainer" parent="."]
 anchor_right = 1.0
