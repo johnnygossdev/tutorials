@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Arrow Physics"
+run/main_scene="res://ArrowTest.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=256
+window/size/height=128
+window/size/test_width=1920
+window/size/test_height=1080
+window/dpi/allow_hidpi=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+environment/default_environment="res://default_env.tres"
