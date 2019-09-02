@@ -13,6 +13,11 @@ func _on_CreateFloatingTextButton_pressed():
 	### White
 	#floaty_text.modulate = Color(1.0, 1.0, 1.0, 1.0)
 	
-	floaty_text.text = randi()%2000 - 1000
+	var amount = randi()%10 - 5
+	
+	
+	floaty_text.text = amount
+	if amount > 0:
+		floaty_text.text = "+" + floaty_text.text
 	
 	add_child(floaty_text)

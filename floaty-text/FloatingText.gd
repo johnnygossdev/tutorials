@@ -9,7 +9,6 @@ var mass = 200
 # warning-ignore:unused_class_variable
 var text setget set_text, get_text
 
-
 func _ready():
 	
 	"""
@@ -23,7 +22,7 @@ func _ready():
 	
 	"""
 	Increase size
-	After 0.6 seconds, start to shrink
+	After 0.6 seconds, start to shrink slightly
 	"""
 	
 	tween.interpolate_property(self, "scale", 
@@ -44,7 +43,7 @@ func _ready():
 	tween.interpolate_callback(self, 1.0, "destroy")
 	
 	"""
-	Stat the tweens
+	Start the tweens
 	"""
 	
 	tween.start()
