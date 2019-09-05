@@ -28,11 +28,11 @@ func _ready():
 	tween.interpolate_property(self, "scale", 
 		Vector2(0, 0), 
 		Vector2(1.0, 1.0),
-		0.3, Tween.TRANS_EXPO, Tween.EASE_OUT, 0.0)
+		0.3, Tween.TRANS_QUART, Tween.EASE_OUT)
 	
 	tween.interpolate_property(self, "scale", 
 		Vector2(1.0, 1.0), 
-		Vector2(0.8, 0.8),
+		Vector2(0.4, 0.4),
 		1.0, Tween.TRANS_LINEAR, Tween.EASE_OUT, 0.6)
 	
 	"""
@@ -66,5 +66,5 @@ func get_text():
 
 
 func destroy():
-	print("destroyed")
+	#print("destroyed")
 	queue_free()
