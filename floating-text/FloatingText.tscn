@@ -9,7 +9,7 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[node name="FloatyText" type="Position2D"]
+[node name="FloatingText" type="Position2D"]
 scale = Vector2( 1e-005, 1e-005 )
 script = ExtResource( 1 )
 
