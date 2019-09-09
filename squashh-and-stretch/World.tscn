@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Obstacle.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, 512 )
+
+[node name="Obstacles" type="Node" parent="."]
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 64, 512 )
+
+[node name="Obstacle15" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 64, 384 )
+
+[node name="Obstacle16" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 64, 256 )
+
+[node name="Obstacle17" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 64, 128 )
+
+[node name="Obstacle18" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 192, 512 )
+
+[node name="Obstacle19" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 64, 0 )
+
+[node name="Obstacle26" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 64, -128 )
+
+[node name="Obstacle20" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 0 )
+
+[node name="Obstacle24" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, -128 )
+
+[node name="Obstacle25" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, -256 )
+
+[node name="Obstacle2" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 64, 640 )
+
+[node name="Obstacle3" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 192, 640 )
+
+[node name="Obstacle4" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 320, 640 )
+
+[node name="Obstacle5" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 448, 640 )
+
+[node name="Obstacle21" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 704, 640 )
+
+[node name="Obstacle6" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 576, 640 )
+
+[node name="Obstacle22" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 832, 640 )
+
+[node name="Obstacle7" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 960, 640 )
+
+[node name="Obstacle8" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 640 )
+
+[node name="Obstacle9" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 512 )
+
+[node name="Obstacle23" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 384 )
+
+[node name="Obstacle10" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 384 )
+
+[node name="Obstacle13" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 256 )
+
+[node name="Obstacle14" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 128 )
+
+[node name="Obstacle11" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 512 )
+
+[node name="Obstacle12" parent="Obstacles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 640 )
