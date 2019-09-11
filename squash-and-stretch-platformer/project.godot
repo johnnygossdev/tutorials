@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="New Game Project"
+config/name="Squash and Stretch Platformer"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 

@@ -34,21 +34,20 @@ func _physics_process(delta):
 	
 	
 	motion_previous = motion
-	motion = move_and_slide(motion, UP)
+	motion = move_and_slide(motion, UP, false)
 	
 	
 	"""
 	-- New Code from this Point --
 	If the player is in the air, make scale of sprite
 	based on the y motion value using range_lerp
+	The fast the y motion, 
+	the larger the y stretch, 
+	the larger the x squash
 	"""
 	
-	var collisions = get_slide_count()
-	
-	if collisions < 1:
-		hit_the_ground = false
-	
 	if not is_on_floor():
+		hit_the_ground = false
 		$Sprite.scale.y = range_lerp(abs(motion.y), 0, abs(JUMP_HEIGHT), 0.75, 1.75)
 		$Sprite.scale.x = range_lerp(abs(motion.y), 0, abs(JUMP_HEIGHT), 1.25, 0.75)
 	
@@ -58,8 +57,7 @@ func _physics_process(delta):
 	previous motion
 	"""
 	
-	if not hit_the_ground and collisions > 0 and is_on_floor():
-		print(motion_previous)
+	if not hit_the_ground and is_on_floor():
 		hit_the_ground = true
 		$Sprite.scale.x = range_lerp(abs(motion_previous.y), 0, abs(1700), 1.2, 2.0)
 		$Sprite.scale.y = range_lerp(abs(motion_previous.y), 0, abs(1700), 0.8, 0.5)
