@@ -47,7 +47,7 @@ func load_room():
 		They are necessary to avoid a null error. See:
 			https://godotengine.org/qa/16807/godot-3-base-nill-while-parsing-json-file
 		"""
-		if not current_line:
+		if current_line == null:
 			continue
 		
         # Firstly, we need to create the object and add it to the tree and set its position.
