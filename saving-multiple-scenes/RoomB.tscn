@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://NPC.tscn" type="PackedScene" id=2]
+
+[node name="RoomB" index="0" instance=ExtResource( 1 )]
+
+[node name="NPC" parent="." index="0" instance=ExtResource( 2 )]
+position = Vector2( 516, -103 )
+speed = 32
+direction = Vector2( -1, 0 )
+
+[node name="NPC2" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( 513, 243 )
+speed = 35
+direction = Vector2( -1, 0 )
+
+[node name="NPC3" parent="." index="2" instance=ExtResource( 2 )]
+position = Vector2( 519, 82 )
+speed = 29
+direction = Vector2( -1, 0 )

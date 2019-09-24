@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SavingMultipleScenes.gd" type="Script" id=1]
+
+[node name="SavingMultipleScenes" type="Node"]
+script = ExtResource( 1 )
+
+[node name="SceneChanger" type="HBoxContainer" parent="."]
+margin_right = 447.0
+margin_bottom = 91.0
+
+[node name="ButtonRoomA" type="Button" parent="SceneChanger"]
+margin_right = 128.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 128, 64 )
+text = "Room A"
+
+[node name="ButtonRoomB" type="Button" parent="SceneChanger"]
+margin_left = 132.0
+margin_right = 260.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 128, 64 )
+text = "Room B"
+
+[node name="ButtonManualSave" type="Button" parent="SceneChanger"]
+margin_left = 264.0
+margin_right = 392.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 128, 64 )
+text = "Manual Save"
+
+[node name="ButtonDeleteSave" type="Button" parent="SceneChanger"]
+margin_left = 396.0
+margin_right = 524.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 128, 64 )
+text = "Delete Save Data"
+
+[node name="LabelCurrentScene" type="Label" parent="SceneChanger"]
+margin_left = 528.0
+margin_top = 38.0
+margin_right = 578.0
+margin_bottom = 52.0
+text = "Room A"
+align = 1
+[connection signal="pressed" from="SceneChanger/ButtonRoomA" to="." method="_on_ButtonRoomA_pressed"]
+[connection signal="pressed" from="SceneChanger/ButtonRoomB" to="." method="_on_ButtonRoomB_pressed"]
+[connection signal="pressed" from="SceneChanger/ButtonManualSave" to="." method="_on_ButtonManualSave_pressed"]
+[connection signal="pressed" from="SceneChanger/ButtonDeleteSave" to="." method="_on_ButtonDeleteSave_pressed"]
