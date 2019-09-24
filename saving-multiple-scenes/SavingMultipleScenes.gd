@@ -2,22 +2,24 @@ extends Node
 
 onready var current_room = null
 
+
 var roomA = load("res://RoomA.tscn")
 var roomB = load("res://RoomB.tscn")
+
 
 func _ready():
 	
 	change_room(roomA)
-	
+
 
 func change_room(room_scene : PackedScene):
 	
 	if current_room:
 		current_room.queue_free()
-	
 		yield(current_room, "tree_exited")
 	
 	var new_room = room_scene.instance()
+	
 	current_room = new_room
 	
 	add_child(new_room)
@@ -45,8 +47,15 @@ func _on_ButtonDeleteSave_pressed():
 
 
 func delete_save_data():
+	"""
+	Adapted from:
+		https://godotengine.org/qa/5175/how-to-get-all-the-files-inside-a-folder
+	"""
+	
 	var dir = Directory.new()
+	
 	dir.open("user://")
+	
 	dir.list_dir_begin()
 
 	while true:
@@ -60,5 +69,6 @@ func delete_save_data():
 
 
 func _on_ButtonManualSave_pressed():
+	
 	if current_room:
 		current_room.save_room()
