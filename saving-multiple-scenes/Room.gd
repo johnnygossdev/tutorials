@@ -5,19 +5,6 @@ func _ready():
 	load_room()
 
 
-func save_room():
-	var save_game = File.new()
-	save_game.open("user://" + name + ".save", File.WRITE)
-	
-	var save_nodes = get_tree().get_nodes_in_group("Persist")
-	
-	for i in save_nodes:
-		var node_data = i.call("save");
-		save_game.store_line(to_json(node_data))
-	
-	save_game.close()
-
-
 func load_room():
 	"""
 	Addapted from:
@@ -43,7 +30,7 @@ func load_room():
 		var current_line = parse_json(save_game.get_line())
 		
 		"""
-		Lines 52 & 53 are not in the documentation.
+		Lines 37 & 38 are not in the documentation as of 03/10/19.
 		They are necessary to avoid a null error. See:
 			https://godotengine.org/qa/16807/godot-3-base-nill-while-parsing-json-file
 		"""
@@ -61,5 +48,17 @@ func load_room():
 			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or i == "direction_x" or i == "direction_y":
 				continue
 			new_object.set(i, current_line[i])
+	
+	save_game.close()
+
+func save_room():
+	var save_game = File.new()
+	save_game.open("user://" + name + ".save", File.WRITE)
+	
+	var save_nodes = get_tree().get_nodes_in_group("Persist")
+	
+	for i in save_nodes:
+		var node_data = i.call("save");
+		save_game.store_line(to_json(node_data))
 	
 	save_game.close()
