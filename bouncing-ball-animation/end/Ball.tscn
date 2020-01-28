@@ -32,6 +32,7 @@ tracks/1/keys = {
 }
 
 [node name="Ball" type="Node2D"]
+position = Vector2( 518.234, 432.939 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -153.329 )
