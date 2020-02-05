@@ -1,0 +1,143 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/RichTextHover.gd" type="Script" id=1]
+
+[sub_resource type="RichTextEffect" id=1]
+script = ExtResource( 1 )
+
+[node name="RichTextEffect" type="Node"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CustomHover" type="PanelContainer" parent="GridContainer"]
+margin_right = 238.0
+margin_bottom = 87.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/CustomHover"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 231.0
+margin_bottom = 80.0
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "This is a[hover speed=5] custom hover effect."
+text = "This is a custom hover effect."
+custom_effects = [ SubResource( 1 ) ]
+
+[node name="Wave" type="PanelContainer" parent="GridContainer"]
+margin_left = 242.0
+margin_right = 480.0
+margin_bottom = 87.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Wave"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 231.0
+margin_bottom = 80.0
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "This is a[wave speed=5] wave effect."
+text = "This is a wave effect."
+custom_effects = [ SubResource( 1 ) ]
+
+[node name="Tornado" type="PanelContainer" parent="GridContainer"]
+margin_top = 91.0
+margin_right = 238.0
+margin_bottom = 178.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Tornado"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 231.0
+margin_bottom = 80.0
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "This is a[tornado speed=5] tornado effect."
+text = "This is a tornado effect."
+custom_effects = [ SubResource( 1 ) ]
+
+[node name="Rainbow" type="PanelContainer" parent="GridContainer"]
+margin_left = 242.0
+margin_top = 91.0
+margin_right = 480.0
+margin_bottom = 178.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Rainbow"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 231.0
+margin_bottom = 80.0
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "This is a[rainbow speed=5] rainbow effect."
+text = "This is a rainbow effect."
+custom_effects = [ SubResource( 1 ) ]
+
+[node name="Fade" type="PanelContainer" parent="GridContainer"]
+margin_top = 182.0
+margin_right = 238.0
+margin_bottom = 269.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Fade"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 231.0
+margin_bottom = 80.0
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "This is a[fade speed=5] fade effect."
+text = "This is a fade effect."
+custom_effects = [ SubResource( 1 ) ]
+
+[node name="Shake" type="PanelContainer" parent="GridContainer"]
+margin_left = 242.0
+margin_top = 182.0
+margin_right = 480.0
+margin_bottom = 269.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Shake"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 231.0
+margin_bottom = 80.0
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "This is a[shake speed=5] shake effect."
+text = "This is a shake effect."
+custom_effects = [ SubResource( 1 ) ]
