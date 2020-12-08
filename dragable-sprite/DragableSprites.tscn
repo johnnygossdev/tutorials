@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://DragableSprite/DragableSprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://DragableSprite/sprite_star.png" type="Texture" id=2]
+[ext_resource path="res://DragableSprite/sprite_circle.png" type="Texture" id=3]
+[ext_resource path="res://DragableSprite/sprite_square.png" type="Texture" id=4]
+
+[node name="DragableSprites" type="Node2D"]
+
+[node name="Stars" type="Node2D" parent="."]
+
+[node name="Star01" parent="Stars" instance=ExtResource( 1 )]
+position = Vector2( 251.335, 227.584 )
+group = "stars"
+
+[node name="Sprite" type="Sprite" parent="Stars/Star01"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stars/Star01"]
+polygon = PoolVector2Array( 5, -111.5, 39.2, -43, 44.1, -43, 120, -32, 120, -22, 65, 31.8, 65, 36.6, 79, 114, 65.7, 114, 0.900002, 79.8, -63.7, 114, -78, 114, -78, 109.8, -64.3, 33.5, -120, -21.2, -120, -31, -117.3, -31, -40, -42.7, -40, -43.5, -5, -112.5, -5, -114, 5, -114 )
+
+[node name="Star02" parent="Stars" instance=ExtResource( 1 )]
+position = Vector2( 153.892, 337.041 )
+rotation = 0.261799
+group = "stars"
+
+[node name="Sprite" type="Sprite" parent="Stars/Star02"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stars/Star02"]
+polygon = PoolVector2Array( 5, -111.5, 39.2, -43, 44.1, -43, 120, -32, 120, -22, 65, 31.8, 65, 36.6, 79, 114, 65.7, 114, 0.900002, 79.8, -63.7, 114, -78, 114, -78, 109.8, -64.3, 33.5, -120, -21.2, -120, -31, -117.3, -31, -40, -42.7, -40, -43.5, -5, -112.5, -5, -114, 5, -114 )
+
+[node name="Star03" parent="Stars" instance=ExtResource( 1 )]
+position = Vector2( 258.009, 418.466 )
+rotation = 0.523599
+group = "stars"
+
+[node name="Sprite" type="Sprite" parent="Stars/Star03"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stars/Star03"]
+position = Vector2( 0.667419, 1.15601 )
+polygon = PoolVector2Array( 5, -111.5, 39.2, -43, 44.1, -43, 120, -32, 120, -22, 65, 31.8, 65, 36.6, 79, 114, 65.7, 114, 0.900002, 79.8, -63.7, 114, -78, 114, -78, 109.8, -64.3, 33.5, -120, -21.2, -120, -31, -117.3, -31, -40, -42.7, -40, -43.5, -5, -112.5, -5, -114, 5, -114 )
+
+[node name="Circles" type="Node2D" parent="."]
+
+[node name="Circle01" parent="Circles" instance=ExtResource( 1 )]
+position = Vector2( 473.665, 111.57 )
+rotation = 0.675442
+group = "circle"
+
+[node name="Sprite" type="Sprite" parent="Circles/Circle01"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Circles/Circle01"]
+polygon = PoolVector2Array( 39, -97.6, 39, -96.2, 61, -85.2, 61, -83.9, 83, -63.9, 83, -61.7, 90, -53.8, 90, -51.4, 100, -28.9, 100, 28.2, 97.6, 39, 96.2, 39, 82.2, 65, 80.9, 65, 53.8, 90, 51.4, 90, 28.9, 100, -29.2, 100, -55, 89.3, -55, 87.9, -83, 63.9, -83, 61.7, -90, 53.8, -90, 51.4, -100, 28.9, -100, -30.8, -97.5, -39, -96.2, -39, -85.2, -61, -83.9, -61, -63.9, -83, -61.6, -83, -37.6, -98, -34.3, -98, -27.7, -100, 28.2, -100 )
+
+[node name="Circle02" parent="Circles" instance=ExtResource( 1 )]
+position = Vector2( 628.507, 195.665 )
+rotation = 0.675442
+group = "circle"
+
+[node name="Sprite" type="Sprite" parent="Circles/Circle02"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Circles/Circle02"]
+polygon = PoolVector2Array( 39, -97.6, 39, -96.2, 61, -85.2, 61, -83.9, 83, -63.9, 83, -61.7, 90, -53.8, 90, -51.4, 100, -28.9, 100, 28.2, 97.6, 39, 96.2, 39, 82.2, 65, 80.9, 65, 53.8, 90, 51.4, 90, 28.9, 100, -29.2, 100, -55, 89.3, -55, 87.9, -83, 63.9, -83, 61.7, -90, 53.8, -90, 51.4, -100, 28.9, -100, -30.8, -97.5, -39, -96.2, -39, -85.2, -61, -83.9, -61, -63.9, -83, -61.6, -83, -37.6, -98, -34.3, -98, -27.7, -100, 28.2, -100 )
+
+[node name="Circle03" parent="Circles" instance=ExtResource( 1 )]
+position = Vector2( 504.367, 293.108 )
+rotation = 0.675442
+group = "circle"
+
+[node name="Sprite" type="Sprite" parent="Circles/Circle03"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Circles/Circle03"]
+polygon = PoolVector2Array( 39, -97.6, 39, -96.2, 61, -85.2, 61, -83.9, 83, -63.9, 83, -61.7, 90, -53.8, 90, -51.4, 100, -28.9, 100, 28.2, 97.6, 39, 96.2, 39, 82.2, 65, 80.9, 65, 53.8, 90, 51.4, 90, 28.9, 100, -29.2, 100, -55, 89.3, -55, 87.9, -83, 63.9, -83, 61.7, -90, 53.8, -90, 51.4, -100, 28.9, -100, -30.8, -97.5, -39, -96.2, -39, -85.2, -61, -83.9, -61, -63.9, -83, -61.6, -83, -37.6, -98, -34.3, -98, -27.7, -100, 28.2, -100 )
+
+[node name="Squares" type="Node2D" parent="."]
+
+[node name="Square01" parent="Squares" instance=ExtResource( 1 )]
+position = Vector2( 812.375, 448.706 )
+rotation = 0.270526
+
+[node name="Sprite" type="Sprite" parent="Squares/Square01"]
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Squares/Square01"]
+polygon = PoolVector2Array( 100, 100, -100, 100, -100, -100, 100, -100 )
