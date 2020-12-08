@@ -21,10 +21,13 @@ position = Vector2( 148.204, 346.754 )
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 margin_bottom = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ResetButton" type="Button" parent="CenterContainer"]
-margin_left = 462.0
-margin_right = 562.0
+margin_left = 910.0
+margin_right = 1010.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 50 )
 text = "Reset"

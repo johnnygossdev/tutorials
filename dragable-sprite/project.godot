@@ -15,20 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Drag Logic"
-run/main_scene="res://DraggableExample.tscn"
+config/name="Dragable Sprites"
+run/main_scene="res://DragableSprites.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/size/width=1920
-window/size/height=1080
-window/size/fullscreen=true
-window/size/test_width=1920
-window/size/test_height=1080
-window/dpi/allow_hidpi=true
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [input]
 
@@ -40,7 +29,5 @@ ui_touch={
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
-vram_compression/import_etc=true
-vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.152941, 0.152941, 0.211765, 1 )
 environment/default_environment="res://default_env.tres"
