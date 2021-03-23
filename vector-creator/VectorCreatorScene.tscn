@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://VectorCreator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ball.gd" type="Script" id=2]
+[ext_resource path="res://ball.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 100.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1200, 10 )
+
+[node name="VectorCreatorScene" type="Node2D"]
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2( 231.633, 459.703 )
+mass = 0.2
+gravity_scale = 20.0
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Ball"]
+texture = ExtResource( 3 )
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+position = Vector2( 0, 39.1995 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2( 994.241, 1041.49 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
+position = Vector2( 1033.44, -406.249 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D3"]
+position = Vector2( 1040.57, 1033.44 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Walls"]
+position = Vector2( 3014.8, -441.885 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D4"]
+position = Vector2( 1051.25, 1086.87 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
+position = Vector2( -46.3267, -1083.33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2"]
+position = Vector2( 1040.57, 1083.33 )
+shape = SubResource( 2 )
+
+[node name="VectorCreator" parent="." instance=ExtResource( 1 )]
+position = Vector2( 960, 540 )
+maximum_length = 1000
+
+[connection signal="vector_created" from="VectorCreator" to="Ball" method="launch"]
